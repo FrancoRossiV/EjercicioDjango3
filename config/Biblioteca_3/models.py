@@ -16,6 +16,7 @@ class Material(models.Model):
 
 class Libro(Material):
     editorial = models.CharField(max_length=50)
+    portada = models.ImageField(max_length=100, upload_to = 'fotos_tapa/', default = 'fotos_tapa/default.png', blank = True)
 
     def __str__(self):
         return "Libro: " + str(self.codigo) + " " + str(self.tipoMaterial) + " " + str(self.autor) + " " + str(self.titulo) + " " + str(self.anio) + " " + str(self.status) + " " + str(self.editorial)

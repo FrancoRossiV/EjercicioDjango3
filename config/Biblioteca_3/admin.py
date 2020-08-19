@@ -33,7 +33,7 @@ class ProfesorAdmin(admin.ModelAdmin):
     )
 
 class LibroAdmin(admin.ModelAdmin):
-    list_display = ('autor', 'titulo', 'anio', 'tipoMaterial','status', 'editorial')
+    list_display = ('autor', 'titulo', 'anio', 'tipoMaterial','status', 'editorial', 'portada')
     list_filter = ('titulo',)
 
 class RevistaAdmin(admin.ModelAdmin):
