@@ -37,8 +37,8 @@ class Prestamo(models.Model):
     codigo = models.AutoField(primary_key=True)
     fechaSalida = models.DateField()
     fechaRegreso = models.DateField()
-    prestamoLibro = models.ManyToManyField(Libro, blank = True)
-    prestamoRevista = models.ManyToManyField(Revista, blank = True)  
-    prestamoAlumno = models.ForeignKey(Alumno, on_delete=models.CASCADE, default = None, blank = True)  
-    prestamoProfesor = models.ForeignKey(Profesor, on_delete=models.CASCADE, default = None, blank = True) 
+    prestamoLibro = models.ManyToManyField(Libro, blank = True, null = True)
+    prestamoRevista = models.ManyToManyField(Revista, blank = True, null = True)  
+    prestamoAlumno = models.ForeignKey(Alumno, on_delete=models.CASCADE, default = None, blank = True, null = True)  
+    prestamoProfesor = models.ForeignKey(Profesor, on_delete=models.CASCADE, default = None, blank = True, null = True) 
 
