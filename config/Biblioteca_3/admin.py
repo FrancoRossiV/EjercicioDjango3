@@ -16,7 +16,7 @@ class AlumnoAdmin(admin.ModelAdmin):
             'fields': ('nombre', 'apellido')
         }),
         ('Contacto', {
-            'fields': ('correo', 'telefono', 'numLibros', 'adeudo')
+            'fields': ('correo', 'telefono', 'numLibros', 'adeudo', 'matricula')
         })
     )
 
